@@ -1,4 +1,4 @@
-# Email-Sender
+# Email-Sender - Автоматическая рассылка писем по почте
 Email Sender - это Windows PowerShell-проект для автоматической отправки HTML-писем с использованием SMTP-сервера, которые работает даже для Gmail.
 Email Sender is a Windows PowerShell project for automatically sending HTML emails using an SMTP server, which even works for Gmail.
 
