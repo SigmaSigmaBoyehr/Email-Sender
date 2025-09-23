@@ -10,12 +10,12 @@ $SMTPPort = 587
 $SMTPUsername = "" #write your email here (like emailfrom)
 $SMTPPassword = "" #here is ur smtppassword
 
-$delayBetweenEmails = 70 #delay
+$delayBetweenEmails = 70 #delay in sec
 
 # Meil recipients
 $recipients = @(
     @{Name="Maxim";   Email="maxim@gmail.com"},
-    @{Name="Артем";    Email="artyom@gmail.com"},
+    @{Name="РђСЂС‚РµРј";    Email="artyom@gmail.com"},
 )
 
 
@@ -72,42 +72,42 @@ $baseBody
                 if (Test-Path $file) {
                     $attachment = New-Object Net.Mail.Attachment($file)
                     $mailMessage.Attachments.Add($attachment)
-                    Write-Host "Добавлено вложение: $file" -ForegroundColor Cyan
+                    Write-Host "Р”РѕР±Р°РІР»РµРЅРѕ РІР»РѕР¶РµРЅРёРµ: $file" -ForegroundColor Cyan
                 }
             }
 
             #Send mail
-            Write-Host "Отправка письма для $($recipient.Name) <$($recipient.Email)>..." -ForegroundColor Yellow
+            Write-Host "РћС‚РїСЂР°РІРєР° РїРёСЃСЊРјР° РґР»СЏ $($recipient.Name) <$($recipient.Email)>..." -ForegroundColor Yellow
             $SMTPClient.Send($mailMessage)
-            Write-Host "Успешно отправлено!" -ForegroundColor Green
+            Write-Host "РЈСЃРїРµС€РЅРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ!" -ForegroundColor Green
             
-            # Очищаем ресурсы
+            #CLear
             if ($mailMessage.Attachments) {
                 $mailMessage.Attachments.Dispose()
             }
 	    if ($recipient -ne $recipients[-1]) {
-                Write-Host "Ожидание $delayBetweenEmails секунд перед следующей отправкой..." -ForegroundColor Gray
+                Write-Host "РћР¶РёРґР°РЅРёРµ $delayBetweenEmails СЃРµРєСѓРЅРґ РїРµСЂРµРґ СЃР»РµРґСѓСЋС‰РµР№ РѕС‚РїСЂР°РІРєРѕР№..." -ForegroundColor Gray
                 Start-Sleep -Seconds $delayBetweenEmails
             }
         }
         catch {
-            Write-Host "Ошибка при отправке для $($recipient.Name):" -ForegroundColor Red
+            Write-Host "РћР¶РёРґР°РЅРёРµ $delayBetweenEmails СЃРµРєСѓРЅРґ РїРµСЂРµРґ СЃР»РµРґСѓСЋС‰РµР№ РѕС‚РїСЂР°РІРєРѕР№..." -ForegroundColor Red
             Write-Host $_.Exception.Message -ForegroundColor Red
         }
     }
 }
 catch {
-    Write-Host "Общая ошибка SMTP:" -ForegroundColor Red
+    Write-Host "РћР±С‰Р°СЏ РѕС€РёР±РєР° SMTP:" -ForegroundColor Red
     Write-Host $_.Exception.Message -ForegroundColor Red
     
     if ($_.Exception.Message -match "5.7.0") {
         Write-Host @"
         
-!ТРЕБУЕТСЯ ДОПОЛНИТЕЛЬНАЯ НАСТРОЙКА GMAIL:
+!РўР Р•Р‘РЈР•РўРЎРЇ Р”РћРџРћР›РќРРўР•Р›Р¬РќРђРЇ РќРђРЎРўР РћР™РљРђ GMAIL:
 
-1. Проверьте пароль приложения
-2. Разрешите доступ для ненадежных приложений
-3. Разблокируйте аккаунт по ссылке:
+1. РџСЂРѕРІРµСЂСЊС‚Рµ РїР°СЂРѕР»СЊ РїСЂРёР»РѕР¶РµРЅРёСЏ
+2. Р Р°Р·СЂРµС€РёС‚Рµ РґРѕСЃС‚СѓРї РґР»СЏ РЅРµРЅР°РґРµР¶РЅС‹С… РїСЂРёР»РѕР¶РµРЅРёР№
+3. Р Р°Р·Р±Р»РѕРєРёСЂСѓР№С‚Рµ Р°РєРєР°СѓРЅС‚ РїРѕ СЃСЃС‹Р»РєРµ:
    https://accounts.google.com/DisplayUnlockCaptcha
 "@ -ForegroundColor Yellow
     }
