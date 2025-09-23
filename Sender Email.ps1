@@ -6,7 +6,7 @@ param (
 # Email settings
 $EmailFrom = "" #write your email here
 $SMTPServer = "smtp.gmail.com" // its smtp server of ur email
-$SMTPPort = 587
+$SMTPPort = #smtpport (587)
 $SMTPUsername = "" #write your email here (like emailfrom)
 $SMTPPassword = "" #here is ur smtppassword
 
@@ -117,3 +117,4 @@ finally {
         $SMTPClient.Dispose()
     }
 }
+
